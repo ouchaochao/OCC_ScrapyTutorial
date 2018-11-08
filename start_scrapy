@@ -1,0 +1,29 @@
+# 新建项目
+scrapy startproject quotetutorial
+
+# 新建文件
+scrapy genspider quotes quotes.toscrape.com
+
+# 修改items里的item为要的item
+
+# 状态
+scrapy crawl quotes
+
+# shell命令
+scrapy shell quotes.toscrape.com
+
+# 保存为json
+scrapy crawl quotes -o quotes.json
+
+# 保存为jl,一行一行地存储
+scrapy crawl quotes -o quotes.jl
+
+# 保存为csv
+scrapy crawl quotes -o quotes.csv
+
+# 远程保存
+scrapy crawl quotes -o ftp://user:pass@ftp.example.com/path/quotes.csv
+
+# 保存到数据库或者修改items,修改pipelines
+'''需要在settings指定pipelines生效'''
+
